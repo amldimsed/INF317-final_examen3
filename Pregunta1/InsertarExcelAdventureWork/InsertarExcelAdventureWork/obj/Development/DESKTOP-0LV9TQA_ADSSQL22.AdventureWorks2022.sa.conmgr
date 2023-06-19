@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-0LV9TQA_ADSSQL22.AdventureWorks2022.sa"
+  DTS:DTSID="{558A92CE-BCB3-48A0-8D75-89D944EC5104}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-0LV9TQA\ADSSQL22;User ID=sa;Initial Catalog=AdventureWorks2022;Persist Security Info=True;Application Name=SSIS-InsertarExcelAdventureWork-{558A92CE-BCB3-48A0-8D75-89D944EC5104}DESKTOP-0LV9TQA\ADSSQL22.AdventureWorks2022.sa;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdJ/a8LXbcUqHbvjG7GMX4gAAAAACAAAAAAAQZgAAAAEAACAAAAAHfiwrk5ix0kfE+GO9UcfQthoq+UTo3Hcd4szwf6CVPAAAAAAOgAAAAAIAACAAAABvUt5gWrDhPc92X9q7MVzDysnJ1gfBNMZEQPJz8LK2e4AAAAB+vr2vwd3+3fcH7oW7i1nABaO5WGCGAbwSuXlg+7Herq1B9sLRdEBH7KHB/iUBs233HZBv39HP2mt8H4uf1st9bmfbQHx+ysT//EMTyS7UU2ipbB7+myDCOmkPa5pNUWE9EqjNRewKKiep2n9f5RKburtlLLUZN4id1FaqmDlOAUAAAACTCBkXHlCexEd/fWz9Xjd0ql6WPYUTo9m1xHyvPGHXy67/JDfUMlemUV9J3kfr/Fv+TEidTMtsU82Z/uZ6JOpw</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

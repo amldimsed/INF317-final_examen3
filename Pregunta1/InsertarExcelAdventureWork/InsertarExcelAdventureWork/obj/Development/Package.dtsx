@@ -1,0 +1,1333 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/18/2023 2:57:51 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-0LV9TQA"
+  DTS:CreatorName="DESKTOP-0LV9TQA\Andres"
+  DTS:DTSID="{998C8036-AB49-4699-83B6-600812591960}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{B739BCB9-93AD-4D26-847E-EF71AE9650ED}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{9B720637-7C4C-43FC-840F-CD79DACB3F93}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\INF-317\AdventurdDWads.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{78A4A2DA-0CB6-43EC-A9A9-876CE8B9A227}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\INF-317\AdventurdDWads.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B2277AA8-E936-4E54-979F-A01B9824EC87}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\INF-317\AdventurdDW3.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{75FD9AB6-9C51-41AD-96EE-FAEF608AB4F3}"
+      DTS:ObjectName="Excel Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\INF-317\examen3-final\Pregunta1\ads1.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 4]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{AEFEF163-CA89-44BE-B954-9378F9248519}"
+      DTS:ObjectName="Excel Connection Manager 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\INF-317\examen3-final\Pregunta1\ads1.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Excel Productos_Location"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{ADB93BF0-CAF3-40EB-8DB0-3410BFFDFB13}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Excel Productos_Location"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Excel Productos_Location\Conversión de datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Excel Productos_Location\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[LocationID]"
+                      cachedDataType="r8"
+                      cachedName="LocationID"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[LocationID]" />
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Name"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[CostRate]"
+                      cachedDataType="r8"
+                      cachedName="CostRate"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[CostRate]" />
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[Availability]"
+                      cachedDataType="r8"
+                      cachedName="Availability"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Availability]" />
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[ModifiedDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ModifiedDate"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ModifiedDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\Excel Productos_Location\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of LocationID]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of LocationID]"
+                      name="Copy of LocationID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[LocationID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Name]"
+                      name="Copy of Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of CostRate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of CostRate]"
+                      name="Copy of CostRate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[CostRate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Availability]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Availability]"
+                      name="Copy of Availability"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Availability]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of ModifiedDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of ModifiedDate]"
+                      name="Copy of ModifiedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ModifiedDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\Excel Productos_Location\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Excel Productos_Location\Destino de ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Destino de ADO NET"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"Production"."Location"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Excel Productos_Location\Destino de ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="{B7E90FE7-21FD-4F4A-90BD-8D74CE7CBE67}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-0LV9TQA_ADS_MYSQLADS.AdventureWorks2019.card]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Copy of LocationID]"
+                      cachedDataType="ui8"
+                      cachedName="Copy of LocationID"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[LocationID]"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of LocationID]" />
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Copy of Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Name"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Name]" />
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Copy of CostRate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of CostRate"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[CostRate]"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of CostRate]" />
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Copy of Availability]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Availability"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Availability]"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Availability]" />
+                    <inputColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Copy of ModifiedDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of ModifiedDate"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of ModifiedDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[LocationID]"
+                      dataType="i2"
+                      name="LocationID" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[CostRate]"
+                      dataType="numeric"
+                      name="CostRate"
+                      precision="10"
+                      scale="255" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Availability]"
+                      dataType="numeric"
+                      name="Availability"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Excel Productos_Location\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Excel Productos_Location\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Excel Productos_Location\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Excel Productos_Location\Origen de Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Origen de Excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">Productos_Location$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Excel Productos_Location\Origen de Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 4]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[LocationID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[LocationID]"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[LocationID]"
+                      name="LocationID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Name]"
+                      length="255"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[CostRate]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[CostRate]"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[CostRate]"
+                      name="CostRate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Availability]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Availability]"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Availability]"
+                      name="Availability"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ModifiedDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ModifiedDate]"
+                      length="255"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[LocationID]"
+                      dataType="r8"
+                      name="LocationID" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[CostRate]"
+                      dataType="r8"
+                      name="CostRate" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Availability]"
+                      dataType="r8"
+                      name="Availability" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ModifiedDate]"
+                      dataType="wstr"
+                      length="255"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[LocationID]"
+                      dataType="r8"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[LocationID]"
+                      name="LocationID" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[CostRate]"
+                      dataType="r8"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[CostRate]"
+                      name="CostRate" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Availability]"
+                      dataType="r8"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Availability]"
+                      name="Availability" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ModifiedDate]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Excel Productos_Location.Paths[Salida de conversión de datos]"
+              endId="Package\Excel Productos_Location\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de conversión de datos"
+              startId="Package\Excel Productos_Location\Conversión de datos.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Excel Productos_Location.Paths[Salida de origen de Excel]"
+              endId="Package\Excel Productos_Location\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de Excel"
+              startId="Package\Excel Productos_Location\Origen de Excel.Outputs[Salida de origen de Excel]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Excel Recursos Humanos_Departamento"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{4A0C4730-8990-4460-8EBC-DE726E23401B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Excel Recursos Humanos_Departamento"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[DepartmenID]"
+                      cachedDataType="r8"
+                      cachedName="DepartmenID"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[DepartmenID]" />
+                    <inputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Name"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[GroupName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="GroupName"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[GroupName]" />
+                    <inputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[ModifiedDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ModifiedDate"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ModifiedDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of DepartmenID]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of DepartmenID]"
+                      name="Copy of DepartmenID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[DepartmenID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Name]"
+                      name="Copy of Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of GroupName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of GroupName]"
+                      name="Copy of GroupName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[GroupName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of ModifiedDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of ModifiedDate]"
+                      name="Copy of ModifiedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ModifiedDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Destino de ADO NET"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"HumanResources"."Department"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="{B7E90FE7-21FD-4F4A-90BD-8D74CE7CBE67}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-0LV9TQA_ADS_MYSQLADS.AdventureWorks2019.card]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Copy of DepartmenID]"
+                      cachedDataType="ui8"
+                      cachedName="Copy of DepartmenID"
+                      externalMetadataColumnId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[DepartmentID]"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of DepartmenID]" />
+                    <inputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Copy of Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Name"
+                      externalMetadataColumnId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Name]" />
+                    <inputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Copy of GroupName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of GroupName"
+                      externalMetadataColumnId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[GroupName]"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of GroupName]" />
+                    <inputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Copy of ModifiedDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of ModifiedDate"
+                      externalMetadataColumnId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of ModifiedDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[DepartmentID]"
+                      dataType="i2"
+                      name="DepartmentID" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[GroupName]"
+                      dataType="wstr"
+                      length="50"
+                      name="GroupName" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Origen de Excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">RecursosHumanosDepartment$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 4]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[DepartmenID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[DepartmenID]"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[DepartmenID]"
+                      name="DepartmenID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Name]"
+                      length="255"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[GroupName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[GroupName]"
+                      length="255"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[GroupName]"
+                      name="GroupName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ModifiedDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ModifiedDate]"
+                      length="255"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[DepartmenID]"
+                      dataType="r8"
+                      name="DepartmenID" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[GroupName]"
+                      dataType="wstr"
+                      length="255"
+                      name="GroupName" />
+                    <externalMetadataColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ModifiedDate]"
+                      dataType="wstr"
+                      length="255"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[DepartmenID]"
+                      dataType="r8"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[DepartmenID]"
+                      name="DepartmenID" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[GroupName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[GroupName]"
+                      name="GroupName" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ModifiedDate]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Excel Recursos Humanos_Departamento.Paths[Salida de conversión de datos]"
+              endId="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de conversión de datos"
+              startId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Excel Recursos Humanos_Departamento.Paths[Salida de origen de Excel]"
+              endId="Package\Excel Recursos Humanos_Departamento\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de Excel"
+              startId="Package\Excel Recursos Humanos_Departamento\Origen de Excel.Outputs[Salida de origen de Excel]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{08C2727B-0F33-404A-98AA-A8E3920C75FC}"
+      DTS:From="Package\Excel Productos_Location"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Excel Recursos Humanos_Departamento" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Excel Productos_Location"
+          TopLeft="120.000002043588,83.3529423454641" />
+        <NodeLayout
+          Size="268.8,41.6"
+          Id="Package\Excel Recursos Humanos_Departamento"
+          TopLeft="88.7301602412245,209.529414703277" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="220.965081142406,124.952942345464">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84.5764723578127"
+              Start="0,0"
+              End="0,77.0764723578127">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.0764723578127" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Excel Productos_Location">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Excel Productos_Location\Origen de Excel"
+          TopLeft="214.285717934978,28.2941180438731" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Excel Productos_Location\Conversión de datos"
+          TopLeft="191.428574688581,145.294119684754" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Excel Productos_Location\Destino de ADO NET"
+          TopLeft="191.428574688581,247.000003464082" />
+        <EdgeLayout
+          Id="Package\Excel Productos_Location.Paths[Salida de origen de Excel]"
+          TopLeft="290.285717934978,69.8941180438731">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.6571432463978,75.4000016408808"
+              Start="0,0"
+              End="-11.6571432463978,67.9000016408808">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.7000008204404" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.7000008204404"
+                    Point2="0,37.7000008204404"
+                    Point3="-4,37.7000008204404" />
+                  <mssgle:LineSegment
+                    End="-7.65714324639777,37.7000008204404" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.65714324639777,37.7000008204404"
+                    Point2="-11.6571432463978,37.7000008204404"
+                    Point3="-11.6571432463978,41.7000008204404" />
+                  <mssgle:LineSegment
+                    End="-11.6571432463978,67.9000016408808" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Excel Productos_Location.Paths[Salida de conversión de datos]"
+          TopLeft="279.028574688581,186.894119684754">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.1058837793277"
+              Start="0,0"
+              End="0,52.6058837793277">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.6058837793277" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Excel Productos_Location\Origen de Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Excel Productos_Location\Destino de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Excel Recursos Humanos_Departamento">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET"
+          TopLeft="375,288" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Excel Recursos Humanos_Departamento\Conversión de datos"
+          TopLeft="373,168.4" />
+        <EdgeLayout
+          Id="Package\Excel Recursos Humanos_Departamento.Paths[Salida de conversión de datos]"
+          TopLeft="461.6,210">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Excel Recursos Humanos_Departamento\Origen de Excel"
+          TopLeft="387.142863735861,47.8470591130966" />
+        <EdgeLayout
+          Id="Package\Excel Recursos Humanos_Departamento.Paths[Salida de origen de Excel]"
+          TopLeft="461.67143186793,89.4470591130966">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78.9529408869034"
+              Start="0,0"
+              End="0,71.4529408869034">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.4529408869034" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Excel Recursos Humanos_Departamento\Destino de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Excel Recursos Humanos_Departamento\Origen de Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

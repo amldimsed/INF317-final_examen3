@@ -1,0 +1,12 @@
+SELECT TOP (1000) [LocationID]
+      ,[Name]
+      ,[CostRate]
+      ,[Availability]
+      ,[ModifiedDate]
+  FROM [AdventureWorks2019].[Production].[Location]
+
+SELECT TOP (1000) [DepartmentID]
+      ,[Name]
+      ,[GroupName]
+      ,[ModifiedDate]
+  FROM [AdventureWorks2019].[HumanResources].[Department]

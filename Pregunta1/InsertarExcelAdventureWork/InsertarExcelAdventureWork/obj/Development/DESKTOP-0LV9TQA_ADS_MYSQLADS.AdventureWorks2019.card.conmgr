@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-0LV9TQA_ADS_MYSQLADS.AdventureWorks2019.card"
+  DTS:DTSID="{B7E90FE7-21FD-4F4A-90BD-8D74CE7CBE67}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-0LV9TQA\ADS_MYSQLADS;User ID=card;Initial Catalog=AdventureWorks2019;Persist Security Info=True;Application Name=SSIS-InsertarExcelAdventureWork-{B7E90FE7-21FD-4F4A-90BD-8D74CE7CBE67}DESKTOP-0LV9TQA\ADS_MYSQLADS.AdventureWorks2019.card;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdJ/a8LXbcUqHbvjG7GMX4gAAAAACAAAAAAAQZgAAAAEAACAAAACHNwn+jjShc1VwXseZZupdcIBFxe6YixatZDdPI+JDSwAAAAAOgAAAAAIAACAAAACO3ZL6Dnv6+qViVqMyH5Mpc2abJ26LVk5ff+089FZ6EoAAAACeKOv6oEZni1TbHKNeHNTdZLV70cwO1XqJFXjkEWYpLGkryrkC3XNLWziEJxJcByjlfHAshLJshAPqJH7S9VBTdXQMwdNa1v3rJs90dmFYceddurv5d2e+V6JlFduPQUvI7yt7vvh1+3/HgCGYE629H1nGyBFrfb5xRb0tKcIjOkAAAABK3xc83hO9hqv7d+THn02noz/9EbGMLaKnvkUieCxSCrZvZtIp0KCabu7VsR40K7xyXolcebbefg5E1iAJL5lt</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
